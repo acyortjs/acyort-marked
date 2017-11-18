@@ -1,0 +1,31 @@
+{
+  "name": "acyort-marked",
+  "version": "0.0.0",
+  "description": "Markdown parser for AcyOrt",
+  "main": "index.js",
+  "scripts": {
+    "test:lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acyortjs/acyort-marked.git"
+  },
+  "keywords": [
+    "markdown",
+    "acyort",
+    "parser",
+    "issues",
+    "blog"
+  ],
+  "author": "LoeiFy@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acyortjs/acyort-marked/issues"
+  },
+  "homepage": "https://github.com/acyortjs/acyort-marked#readme",
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
