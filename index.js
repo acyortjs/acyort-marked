@@ -20,7 +20,7 @@ class Marked extends Parser {
       smartypants: false,
     })
 
-    return markedFn(content)
+    return marked(content)
   }
 }
 
