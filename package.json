@@ -4,7 +4,9 @@
   "description": "Markdown parser for AcyOrt",
   "main": "index.js",
   "scripts": {
-    "test:lint": "eslint ."
+    "test": "npm run test:lint && npm run test:cover",
+    "test:lint": "eslint .",
+    "test:cover": "istanbul cover --print both _mocha -r intelli-espower-loader test"
   },
   "repository": {
     "type": "git",

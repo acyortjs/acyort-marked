@@ -2,10 +2,6 @@ const marked = require('marked')
 const Parser = require('./lib')
 
 class Marked extends Parser {
-  constructor(config) {
-    super(config)
-  }
-
   mark(content, unParse) {
     const { Renderer } = marked
 
