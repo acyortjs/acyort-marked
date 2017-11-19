@@ -1,14 +1,14 @@
 const marked = require('marked')
 const Parser = require('./lib')
 
-const { Renderer } = marked
-
 class Marked extends Parser {
   constructor(config) {
     super(config)
   }
 
   mark(content, unParse) {
+    const { Renderer } = marked
+
     marked.setOptions({
       renderer: Object.assign(new Renderer(), this.parse(unParse)),
       gfm: true,
