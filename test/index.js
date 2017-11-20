@@ -9,8 +9,8 @@ String.prototype.trim = function() {
     .replace(/\>[\t ]+$/g, '>')
 }
 
-describe('heading', () => {
-  it('power-assert', () => {
+describe('markdown', () => {
+  it('heading', () => {
     const config = { line_numbers: true }
     const markeder = new Marked(config)
     const heading = '# An h1 header'
@@ -18,10 +18,8 @@ describe('heading', () => {
     assert(markeder.mark(heading) === '<h1 id="anh1header">An h1 header</h1>')
     assert(markeder.mark(heading, true) === '<h1>An h1 header</h1>')
   })
-})
 
-describe('list', () => {
-  it('power-assert', () => {
+  it('list', () => {
     const config = { line_numbers: true }
     const markeder = new Marked(config)
     const list = '- this one\n- that one'
@@ -30,10 +28,8 @@ describe('list', () => {
     assert(markeder.mark(list).trim() === '<ul><li>this one</li><li>that one</li></ul>')
     assert(markeder.mark(tasks).trim() === '<ul><li style="list-style:none"><input type="checkbox" checked disabled /> it is done</li><li style="list-style:none"><input type="checkbox" disabled /> it is not done</li></ul>')
   })
-})
 
-describe('code', () => {
-  it('power-assert', () => {
+  it('code', () => {
     let config = { line_numbers: true }
     let markeder = new Marked(config)
     let code = '\`\`\`html\n<h1>h1</h1>\n\`\`\`'
