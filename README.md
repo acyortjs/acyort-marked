@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/acyortjs/acyort-marked.svg?branch=master)](https://travis-ci.org/acyortjs/acyort-marked)
 [![codecov](https://codecov.io/gh/acyortjs/acyort-marked/branch/master/graph/badge.svg)](https://codecov.io/gh/acyortjs/acyort-marked)
 
-Markdown parser for AcyOrt
+Markdown parser for [AcyOrt](https://github.com/acyortjs/acyort)
 
 ## Install
 
@@ -50,7 +50,9 @@ console.log(markeder.mark(code))
 //          <pre><span>1</span></pre>
 //        </td>
 //        <td class="code">
-//          <pre><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></pre>
+//          <pre>
+//            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+//          </pre>
 //        </td>
 //      </tr>
 //    </tbody>
@@ -66,49 +68,10 @@ markeder = new Marked(config)
 
 console.log(markeder.mark(code))
 // <div class="hljs html">
-//  <pre><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+//  <pre>
+//    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 //  </pre>
 // </div>
 
-// more: visit the test cases
+// more: check the test cases
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
