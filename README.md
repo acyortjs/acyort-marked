@@ -13,7 +13,7 @@ $ npm i acyort-marked -S
 
 ## Usage
 
-```
+```js
 const Marked = require('acyort-marked')
 
 let config = { line_numbers: true }
