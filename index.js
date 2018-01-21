@@ -18,6 +18,10 @@ class Marked extends Parser {
 
     return marked(content)
   }
+
+  set lineNumbers(show) {
+    this.ln = show
+  }
 }
 
 module.exports = Marked

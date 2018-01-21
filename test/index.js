@@ -49,5 +49,9 @@ describe('markdown', () => {
     code = '\`\`\`\n<h1>h1</h1>\n\`\`\`'
 
     assert(markeder.mark(code).trim() === '<div class="hljs"><pre>&lt;h1&gt;h1&lt;&#x2F;h1&gt;</pre></div>')
+
+    markeder.lineNumbers = true
+
+    assert(markeder.mark(code).trim() === '<div class="hljs"><table><tbody><tr><td class="line"><pre><span>1</span></pre></td><td class="code"><pre>&lt;h1&gt;h1&lt;&#x2F;h1&gt;</pre></td></tr></tbody></table></div>')
   })
 })
