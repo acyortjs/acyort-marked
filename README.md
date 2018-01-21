@@ -73,5 +73,25 @@ console.log(markeder.mark(code))
 //  </pre>
 // </div>
 
-// more: check the test cases
+markeder.lineNumbers = true
+const _code = '\`\`\`\n<h1>h1</h1>\n\`\`\`'
+
+markeder.mark(_code)
+/*
+<div class="hljs">
+<table>
+  <tbody>
+    <tr>
+      <td class="line">
+        <pre><span>1</span></pre>
+      </td>
+      <td class="code">
+        <pre>&lt;h1&gt;h1&lt;&#x2F;h1&gt;</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+*/
+
 ```
