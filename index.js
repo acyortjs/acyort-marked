@@ -4,18 +4,9 @@ const Parser = require('./lib')
 class Marked extends Parser {
   mark(content, unParse) {
     const { Renderer } = marked
+    const renderer = Object.assign(new Renderer(), this.parse(unParse))
 
-    marked.setOptions({
-      renderer: Object.assign(new Renderer(), this.parse(unParse)),
-      gfm: true,
-      tables: true,
-      breaks: false,
-      pedantic: false,
-      sanitize: true,
-      smartLists: true,
-      smartypants: false,
-    })
-
+    marked.setOptions({ renderer })
     return marked(content)
   }
 

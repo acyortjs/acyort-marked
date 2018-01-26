@@ -19,6 +19,14 @@ describe('markdown', () => {
     assert(markeder.mark(heading, true) === '<h1>An h1 header</h1>')
   })
 
+  it('html', () => {
+    const config = { line_numbers: true }
+    const markeder = new Marked(config)
+    const heading = '# h1\n<h1>h1</h1>'
+
+    assert(markeder.mark(heading, true).trim() === '<h1>h1</h1><h1>h1</h1>')
+  })
+
   it('list', () => {
     const config = { line_numbers: true }
     const markeder = new Marked(config)
