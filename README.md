@@ -15,15 +15,15 @@ $ npm i acyort-marked -S
 
 ```js
 const Marked = require('acyort-marked')
-const { headingFormater } = require('acyort-marked')
+const { headingIdFormater } = require('acyort-marked')
 
 // default heading formater
-headingFormater('Some text')
+headingIdFormater('Some text')
 
 const config = {
   line_numbers: true,   // show code line numbers
   simple_mode: false,   // simple markdown parser, not highlights code, not heading id
-  headingFormater: fn   // heading id format function
+  headingIdFormater: fn   // heading id format function
 }
 
 const markeder = new Marked(config)
@@ -32,7 +32,7 @@ const markeder = new Marked(config)
 markeder.config = {
   line_numbers: true,
   simple_mode: false,
-  headingFormater: fn
+  headingIdFormater: fn
 }
 
 // parse markdown string
@@ -43,9 +43,9 @@ markeder.mark('# H1')
 
 ```js
 const Marked = require('acyort-marked')
-const { headingFormater } = require('acyort-marked')
+const { headingIdFormater } = require('acyort-marked')
 
-console.log(headingFormater('aa bb'))
+console.log(headingIdFormater('aa bb'))
 // aabb
 
 let config = { line_numbers: true }
@@ -63,7 +63,7 @@ markeder.config = { simple_mode: true }
 console.log(markeder.mark(heading))
 // <h1>An h1 header</h1>
 
-markeder.config = { headingFormater: text => 'heading' }
+markeder.config = { headingIdFormater: text => 'heading' }
 
 console.log(markeder.mark(heading))
 // <h1 id="heading">An h1 header</h1>

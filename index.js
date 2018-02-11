@@ -15,7 +15,7 @@ class Marked extends Parser {
     const {
       line_numbers: lineNumbers,
       simple_mode: simpleMode,
-      headingFormater,
+      headingIdFormater,
     } = values
 
     if (lineNumbers !== undefined) {
@@ -24,11 +24,11 @@ class Marked extends Parser {
     if (simpleMode !== undefined) {
       this.simpleMode = simpleMode
     }
-    if (headingFormater !== undefined) {
-      this.headingFormater = headingFormater
+    if (headingIdFormater !== undefined) {
+      this.headingIdFormater = headingIdFormater
     }
   }
 }
 
 module.exports = Marked
-module.exports.headingFormater = formater
+module.exports.headingIdFormater = formater

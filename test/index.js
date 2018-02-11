@@ -1,6 +1,6 @@
 const assert = require('power-assert')
 const Marked = require('../')
-const { headingFormater } = require('../')
+const { headingIdFormater } = require('../')
 
 String.prototype.trim = function() {
   return this
@@ -12,13 +12,13 @@ String.prototype.trim = function() {
 
 describe('markdown', () => {
   it('heading', () => {
-    const config = { headingFormater: text => 'heading' }
+    const config = { headingIdFormater: text => 'heading' }
     let markeder = new Marked()
     const heading = '# An h1 header'
 
     assert(markeder.mark(heading) === '<h1 id="anh1header">An h1 header</h1>')
 
-    markeder.config = { headingFormater: text => 'heading' }
+    markeder.config = { headingIdFormater: text => 'heading' }
     assert(markeder.mark(heading) === '<h1 id="heading">An h1 header</h1>')
 
     markeder.config = { simple_mode: true }
@@ -29,7 +29,7 @@ describe('markdown', () => {
   })
 
   it('formater', () => {
-    assert(headingFormater('aa bb') === 'aabb')
+    assert(headingIdFormater('aa bb') === 'aabb')
   })
 
   it('list', () => {
