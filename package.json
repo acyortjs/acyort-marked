@@ -1,6 +1,6 @@
 {
   "name": "acyort-marked",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "description": "Markdown parser for AcyOrt",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,7 @@
     "markdown",
     "acyort",
     "parser",
-    "issues",
-    "blog"
+    "issues"
   ],
   "author": "LoeiFy@gmail.com",
   "license": "MIT",

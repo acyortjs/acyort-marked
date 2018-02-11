@@ -11,15 +11,45 @@ Markdown parser for [AcyOrt](https://github.com/acyortjs/acyort)
 $ npm i acyort-marked -S
 ```
 
+### API
+
+```js
+const Marked = require('acyort-marked')
+const { headingFormater } = require('acyort-marked')
+
+// default heading formater
+headingFormater('Some text')
+
+const config = {
+  line_numbers: true,   // show code line numbers
+  simple_mode: false,   // simple markdown parser, not highlights code, not heading id
+  headingFormater: fn   // heading id format function
+}
+
+const markeder = new Marked(config)
+
+// reset config
+markeder.config = {
+  line_numbers: true,
+  simple_mode: false,
+  headingFormater: fn
+}
+
+// parse markdown string
+markeder.mark('# H1')
+```
+
 ## Usage
 
 ```js
 const Marked = require('acyort-marked')
+const { headingFormater } = require('acyort-marked')
+
+console.log(headingFormater('aa bb'))
+// aabb
 
 let config = { line_numbers: true }
 let markeder = new Marked(config)
-
-// use: markeder.mark(content, unParse)
 
 const heading = '# An h1 header'
 const tasks = '- [x] it is done\n- [ ] it is not done'
@@ -28,8 +58,15 @@ const code = '\`\`\`html\n<h1>h1</h1>\n\`\`\`'
 console.log(markeder.mark(heading))
 // <h1 id="anh1header">An h1 header</h1>
 
-console.log(markeder.mark(heading, true))
+markeder.config = { simple_mode: true }
+
+console.log(markeder.mark(heading))
 // <h1>An h1 header</h1>
+
+markeder.config = { headingFormater: text => 'heading' }
+
+console.log(markeder.mark(heading))
+// <h1 id="heading">An h1 header</h1>
 
 console.log(markeder.mark(tasks))
 // <ul>
@@ -40,6 +77,8 @@ console.log(markeder.mark(tasks))
 //    <input type="checkbox" disabled /> it is not done
 //  </li>
 // </ul>
+
+markeder.config = { simple_mode: false }
 
 console.log(markeder.mark(code))
 // <div class="hljs html">
@@ -59,12 +98,13 @@ console.log(markeder.mark(code))
 //  </table>
 // </div>
 
-console.log(markeder.mark(code, true))
+markeder.config = { simple_mode: true }
+
+console.log(markeder.mark(code))
 // <pre><code>&lt;h1&gt;h1&lt;&#x2F;h1&gt;</code></pre>
 
 
-config = { line_numbers: false }
-markeder = new Marked(config)
+markeder.config = { line_numbers: false, simple_mode: false }
 
 console.log(markeder.mark(code))
 // <div class="hljs html">
@@ -72,26 +112,5 @@ console.log(markeder.mark(code))
 //    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 //  </pre>
 // </div>
-
-markeder.lineNumbers = true
-const _code = '\`\`\`\n<h1>h1</h1>\n\`\`\`'
-
-markeder.mark(_code)
-/*
-<div class="hljs">
-<table>
-  <tbody>
-    <tr>
-      <td class="line">
-        <pre><span>1</span></pre>
-      </td>
-      <td class="code">
-        <pre>&lt;h1&gt;h1&lt;&#x2F;h1&gt;</pre>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-*/
 
 ```
