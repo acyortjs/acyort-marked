@@ -1,6 +1,5 @@
 const assert = require('power-assert')
 const Marked = require('../')
-const { headingIdFormater } = require('../')
 
 String.prototype.trim = function() {
   return this
@@ -29,6 +28,7 @@ describe('markdown', () => {
   })
 
   it('formater', () => {
+    const { headingIdFormater } = new Marked()
     assert(headingIdFormater('aa bb') === 'aabb')
   })
 
