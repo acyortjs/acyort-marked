@@ -28,7 +28,7 @@ describe('markdown', () => {
   })
 
   it('formater', () => {
-    const { headingIdFormater } = new Marked()
+    const { headingIdFormater } = Marked
     assert(headingIdFormater('aa bb') === 'aabb')
   })
 

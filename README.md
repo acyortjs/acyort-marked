@@ -23,7 +23,7 @@ const config = {
 }
 
 const markeder = new Marked(config)
-const { headingIdFormater } = markeder
+const { headingIdFormater } = Marked
 
 // default heading formater
 headingIdFormater('Some text')
