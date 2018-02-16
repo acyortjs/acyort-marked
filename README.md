@@ -15,6 +15,7 @@ $ npm i acyort-marked -S
 
 ```js
 const Marked = require('acyort-marked')
+const { headingIdFormater } = require('acyort-marked')
 
 const config = {
   line_numbers: true,   // show code line numbers
@@ -23,7 +24,6 @@ const config = {
 }
 
 const markeder = new Marked(config)
-const { headingIdFormater } = Marked
 
 // default heading formater
 headingIdFormater('Some text')

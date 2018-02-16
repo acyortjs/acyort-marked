@@ -11,10 +11,6 @@ class Marked extends Parser {
     return marked(content)
   }
 
-  static headingIdFormater(text) {
-    return formater(text)
-  }
-
   set config(values) {
     const {
       line_numbers: lineNumbers,
@@ -35,3 +31,4 @@ class Marked extends Parser {
 }
 
 module.exports = Marked
+module.exports.headingIdFormater = formater
