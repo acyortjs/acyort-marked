@@ -31,15 +31,6 @@ describe('markdown', () => {
     assert(headingIdFormater('aa bb') === 'aabb')
   })
 
-  it('list', () => {
-    const marker = new Marked()
-    const list = '- this one\n- that one'
-    const tasks = '- [x] it is done\n- [ ] it is not done'
-
-    assert(marker.parse(list).trim() === '<ul><li>this one</li><li>that one</li></ul>')
-    assert(marker.parse(tasks).trim() === '<ul><li style="list-style:none"><input type="checkbox" checked disabled /> it is done</li><li style="list-style:none"><input type="checkbox" disabled /> it is not done</li></ul>')
-  })
-
   it('code', () => {
     let config = { line_numbers: true }
     let marker = new Marked(config)
