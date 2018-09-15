@@ -1,6 +1,5 @@
 const marked = require('marked')
 const Parser = require('./lib')
-const formater = require('./lib/format')
 
 const { Renderer } = marked
 
@@ -13,4 +12,3 @@ class Marked extends Parser {
 }
 
 module.exports = Marked
-module.exports.headingIdFormater = formater

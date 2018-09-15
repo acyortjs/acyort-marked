@@ -1,41 +1,41 @@
 {
-  "name": "acyort-marked",
-  "version": "1.1.1",
-  "description": "Markdown parser for AcyOrt",
+  "name": "@acyort/markdown",
+  "version": "0.1.0",
+  "description": "Markdown parser with code highlight",
   "main": "index.js",
   "scripts": {
     "test": "npm run test:lint && npm run test:cover",
     "test:lint": "eslint .",
     "test:unit": "mocha --reporter dot --require intelli-espower-loader ./test",
-    "test:cover": "istanbul cover --print both _mocha ./test"
+    "test:cover": "nyc npm test:unit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acyortjs/acyort-marked.git"
+    "url": "git+https://github.com/acyortjs/markdown.git"
   },
   "keywords": [
     "markdown",
-    "acyort",
     "parser",
-    "issues"
+    "code",
+    "highlight"
   ],
-  "author": "LoeiFy@gmail.com",
+  "author": "LoeiFy <LoeiFy@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/acyortjs/acyort-marked/issues"
+    "url": "https://github.com/acyortjs/markdown/issues"
   },
-  "homepage": "https://github.com/acyortjs/acyort-marked#readme",
+  "homepage": "https://github.com/acyortjs/markdown#readme",
   "devDependencies": {
-    "eslint": "^4.11.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "intelli-espower-loader": "^1.0.1",
-    "istanbul": "^0.4.5",
-    "mocha": "^4.0.1",
-    "power-assert": "^1.4.4"
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "power-assert": "^1.6.1"
   },
   "dependencies": {
     "highlight.js": "^9.12.0",
-    "marked": "^0.4.0"
+    "marked": "^0.5.0"
   }
 }
