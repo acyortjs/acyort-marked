@@ -1,6 +1,6 @@
 {
   "name": "@acyort/markdown",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Markdown parser with code highlight",
   "main": "index.js",
   "scripts": {
