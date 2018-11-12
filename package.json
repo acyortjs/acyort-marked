@@ -1,8 +1,12 @@
 {
   "name": "@acyort/markdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Markdown parser with code highlight",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
   "scripts": {
     "test": "npm run test:lint && npm run test:cover",
     "test:lint": "eslint .",
