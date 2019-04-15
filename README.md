@@ -13,6 +13,8 @@ $ npm i @acyort/markdown -S
 
 ### Usage
 
+basic
+
 ```js
 const Marked = require('@acyort/markdown')
 
@@ -50,22 +52,25 @@ marker.parse('# An h1 header', options)
 
 const code = '\`\`\`html\n<h1>h1</h1>\n\`\`\`'
 marker.parse(code)
-// <div class="hljs html">
+// <div class="code-highlight">
 //   <table>
 //     <tbody>
 //       <tr>
-//         <td class="line">
-//           <pre>
-//             <span>1</span>
-//           </pre>
-//         </td>
-//         <td class="code">
-//           <pre>
-//             <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-//           </pre>
-//         </td>
+//         <td class="code-highlight-line"><pre class="language-none">
+//   <code class="language-none"><span>1</span>
+// </code>
+// </pre></td>
+//         <td class="code-highlight-code"><pre class="language-html">
+//   <code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>h1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code>
+// </pre></td>
 //       </tr>
 //     </tbody>
 //   </table>
 // </div>
+```
+
+Marked [lexer](https://marked.js.org/#/USING_PRO.md#lexer) API
+
+```js
+const { lexer } = require('@acyort/markdown')
 ```
