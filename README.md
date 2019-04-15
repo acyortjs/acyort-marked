@@ -17,18 +17,16 @@ $ npm i @acyort/markdown -S
 const Marked = require('@acyort/markdown')
 
 const config = {
-  lineNumbers: true,      // show code line numbers
-  simpleMode: false,      // simple markdown parser, not highlights code, not heading id
-  headingIdFormater: fn   // heading id format function
+  lineNumbers: true,      // if show code line numbers
+  getHeadingId: fn        // for set heading id
 }
 
 const marker = new Marked(config)
 
-// parse option, this override initialization optons
+// parse option, this will override initial option
 const option = {
   lineNumbers: true,
-  simpleMode: false,
-  headingIdFormater: fn
+  getHeadingId: fn
 }
 
 // parse markdown string
@@ -39,14 +37,14 @@ marker.parse('# H1', option)
 
 marker.parse('# An h1 header')
 // <h1>
-//   <a href="#An h1 header" id="An h1 header" class="heading"></a>
+//   <a href="#An h1 header" id="An h1 header"></a>
 //   An h1 header
 // </h1>
 
-const option = { headingIdFormater: () => 'heading' }
+const option = { getHeadingId: () => 'heading' }
 marker.parse('# An h1 header', options)
 // <h1>
-//   <a href="#heading" id="heading" class="heading"></a>
+//   <a href="#heading" id="heading"></a>
 //   An h1 header
 // </h1>
 
@@ -70,11 +68,4 @@ marker.parse(code)
 //     </tbody>
 //   </table>
 // </div>
-
-marker.parse(code, { simpleMode: true })
-// <pre>
-//   <code>&lt;h1&gt;h1&lt;&#x2F;h1&gt;</code>
-// </pre>
-
-// more examples in test folder
 ```

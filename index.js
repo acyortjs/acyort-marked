@@ -8,3 +8,5 @@ module.exports = class extends Parser {
     return marked(content)
   }
 }
+
+module.exports.lexer = marked.lexer

@@ -1,4 +1,3 @@
-/* global describe it */
 /* eslint no-extend-native: 0 */
 
 const assert = require('power-assert')
