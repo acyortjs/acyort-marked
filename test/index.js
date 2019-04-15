@@ -28,30 +28,28 @@ describe('markdown', () => {
   })
 
   it('code', () => {
-    let config = { lineNumbers: true }
-    let marker = new Marked(config)
+    let marker = new Marked()
     let code = '```html\n<h1>h1</h1>\n```'
 
-    console.log(marker.parse(code).trim())
+    assert(marker.parse(code).trim() === '<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>h1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code></pre>')
 
-    // assert(marker.parse(code).trim() === '<div class="hljs html"><table><tbody><tr><td class="line"><pre><span>1</span></pre></td><td class="code"><pre><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></pre></td></tr></tbody></table></div>')
+    assert(marker.parse(code, { lineNumbers: true }).trim() === '<div class="code-highlight"><table><tbody><tr><td class="code-highlight-line"><pre class="language-none"><code class="language-none"><span>1</span></code></pre></td><td class="code-highlight-code"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>h1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code></pre></td></tr></tbody></table></div>')
 
-  /*
-    assert(marker.parse(code, { simpleMode: true }).trim() === '<pre><code>&lt;h1&gt;h1&lt;&#x2F;h1&gt;</code></pre>')
+    code = '```javascript\nvar a = 1;\n```'
 
-    code = '```js\nvar a = 1;\n```'
-    assert(marker.parse(code, { lineNumbers: false }).trim() === '<div class="hljs javascript"><pre><span class="hljs-attribute">var a</span> = 1;</pre></div>')
+    assert(marker.parse(code).trim() === '<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> a<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span></code></pre>')
 
     code = '```\n<h1>h1</h1>\n```'
-    assert(marker.parse(code, { lineNumbers: false }).trim() === '<div class="hljs"><pre>&lt;h1&gt;h1&lt;&#x2F;h1&gt;</pre></div>')
 
-    config = {
-      simpleMode: false,
-      lineNumbers: false,
-    }
+    assert(marker.parse(code).trim() === '<pre class="language-none"><code class="language-none">&lt;h1&gt;h1&lt;&#x2F;h1&gt;</code></pre>')
+    assert(marker.parse(code, { lineNumbers: true }).trim() === '<div class="code-highlight"><table><tbody><tr><td class="code-highlight-line"><pre class="language-none"><code class="language-none"><span>1</span></code></pre></td><td class="code-highlight-code"><pre class="language-none"><code class="language-none">&lt;h1&gt;h1&lt;&#x2F;h1&gt;</code></pre></td></tr></tbody></table></div>')
+
+    code = '```sss\n<h1>h1</h1>\n```'
+    assert(marker.parse(code).trim() === '<pre class="language-none"><code class="language-none">&lt;h1&gt;h1&lt;&#x2F;h1&gt;</code></pre>')
+
     code = '```html\n<h1>h1</h1>\n```'
-    marker = new Marked(config)
-    assert(marker.parse(code).trim() === '<div class="hljs html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></pre></div>')
-    */
+    marker = new Marked({ lineNumbers: true })
+
+    assert(marker.parse(code).trim() === '<div class="code-highlight"><table><tbody><tr><td class="code-highlight-line"><pre class="language-none"><code class="language-none"><span>1</span></code></pre></td><td class="code-highlight-code"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>h1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code></pre></td></tr></tbody></table></div>')
   })
 })
