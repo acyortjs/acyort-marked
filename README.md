@@ -32,26 +32,26 @@ const option = {
 }
 
 // parse markdown string
-marker.parse('# H1')
+marker.render('# H1')
 
 // width option
-marker.parse('# H1', option)
+marker.render('# H1', option)
 
-marker.parse('# An h1 header')
+marker.render('# An h1 header')
 // <h1>
 //   <a href="#An h1 header" id="An h1 header"></a>
 //   An h1 header
 // </h1>
 
 const option = { getHeadingId: () => 'heading' }
-marker.parse('# An h1 header', options)
+marker.render('# An h1 header', options)
 // <h1>
 //   <a href="#heading" id="heading"></a>
 //   An h1 header
 // </h1>
 
 const code = '\`\`\`html\n<h1>h1</h1>\n\`\`\`'
-marker.parse(code)
+marker.render(code)
 // <div class="code-highlight">
 //   <table>
 //     <tbody>
