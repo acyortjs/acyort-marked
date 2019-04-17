@@ -12,6 +12,7 @@ String.prototype.trim = function trim() {
 }
 
 describe('markdown', () => {
+  /*
   it('heading', () => {
     let marker = new Marked()
     const h0 = '# An h1 header'
@@ -56,5 +57,13 @@ describe('markdown', () => {
 
     marker = new Marked({ lineNumbers: false })
     assert(marker.render(code).trim() === '<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>h1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code></pre>')
+  })
+  */
+
+  it('mathjax', () => {
+    const marker = new Marked()
+    const math = require('fs').readFileSync('./test.md', 'utf8')
+
+    console.log(marker.render(math))
   })
 })
