@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/acyortjs/markdown.svg?branch=master)](https://travis-ci.org/acyortjs/markdown)
 [![codecov](https://codecov.io/gh/acyortjs/markdown/branch/master/graph/badge.svg)](https://codecov.io/gh/acyortjs/markdown)
 
-Markdown parser with code highlighting
+markdown parser with code highlighting and math latex support
 
 ## Install
 
