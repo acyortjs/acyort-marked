@@ -11,9 +11,9 @@ markdown parser with code highlighting and math latex support
 $ npm i @acyort/markdown -S
 ```
 
-### Usage
+## Usage
 
-basic
+### basic
 
 ```js
 const Marked = require('@acyort/markdown')
@@ -69,13 +69,20 @@ marker.render(code)
 // </div>
 ```
 
-Marked [lexer](https://marked.js.org/#/USING_PRO.md#lexer) API
+```html
+<!-- add prism css -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/prism/1.16.0/themes/prism.min.css" />
+```
+
+### Marked lexer API
+
+[lexer](https://marked.js.org/#/USING_PRO.md#lexer)
 
 ```js
 const { lexer } = require('@acyort/markdown')
 ```
 
-math latex
+### math latex
 
 ```js
 const text = '实例：$$f(x)=x$$'
@@ -86,6 +93,6 @@ marker.render(text)
 ```
 
 ```html
-<!-- you should add katex css -->
+<!-- add katex css -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
 ```
