@@ -5,6 +5,8 @@
 
 markdown parser with code highlighting and math latex support
 
+[DEMO](https://acyortjs.github.io/markdown/)
+
 ## Install
 
 ```bash

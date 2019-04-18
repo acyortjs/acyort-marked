@@ -9,7 +9,9 @@
 <body>
 <h1>
   <a href="#Headers" id="Headers"></a>Headers
-</h1><h2>
+</h1><pre class="language-md"><code class="language-md"><span class="token title important"><span class="token punctuation">##</span> This is an h2 tag</span>
+<span class="token title important"><span class="token punctuation">###</span> This is an h3 tag</span>
+<span class="token title important"><span class="token punctuation">######</span> This is an h6 tag</span></code></pre><h2>
   <a href="#This is an h2 tag" id="This is an h2 tag"></a>This is an h2 tag
 </h2><h3>
   <a href="#This is an h3 tag" id="This is an h3 tag"></a>This is an h3 tag
@@ -17,11 +19,22 @@
   <a href="#This is an h6 tag" id="This is an h6 tag"></a>This is an h6 tag
 </h6><h1>
   <a href="#Emphasis" id="Emphasis"></a>Emphasis
-</h1><p><em>This text will be italic</em>
+</h1><pre class="language-md"><code class="language-md"><span class="token italic"><span class="token punctuation">*</span>This text will be italic<span class="token punctuation">*</span></span>
+<span class="token italic"><span class="token punctuation">_</span>This will also be italic<span class="token punctuation">_</span></span>
+
+<span class="token bold"><span class="token punctuation">**</span>This text will be bold<span class="token punctuation">**</span></span>
+<span class="token bold"><span class="token punctuation">__</span>This will also be bold<span class="token punctuation">__</span></span>
+
+<span class="token italic"><span class="token punctuation">_</span>You <span class="token bold"><span class="token punctuation">**</span>can<span class="token punctuation">**</span></span> combine them<span class="token punctuation">_</span></span>
+
+<span class="token strike"><span class="token punctuation">~~</span>this<span class="token punctuation">~~</span></span></code></pre><p><em>This text will be italic</em>
 <em>This will also be italic</em></p><p><strong>This text will be bold</strong>
 <strong>This will also be bold</strong></p><p><em>You <strong>can</strong> combine them</em></p><p><del>this</del></p><h1>
   <a href="#Lists" id="Lists"></a>Lists
-</h1><p><strong>Unordered</strong></p><ul>
+</h1><p><strong>Unordered</strong></p><pre class="language-md"><code class="language-md"><span class="token list punctuation">*</span> Item 1
+<span class="token list punctuation">*</span> Item 2
+  <span class="token list punctuation">*</span> Item 2a
+  <span class="token list punctuation">*</span> Item 2b</code></pre><ul>
 <li>Item 1</li>
 <li>Item 2<ul>
 <li>Item 2a</li>
@@ -29,7 +42,11 @@
 </ul>
 </li>
 </ul>
-<p><strong>Ordered</strong></p><ol>
+<p><strong>Ordered</strong></p><pre class="language-md"><code class="language-md"><span class="token list punctuation">1.</span> Item 1
+<span class="token list punctuation">1.</span> Item 2
+<span class="token list punctuation">1.</span> Item 3
+   <span class="token list punctuation">1.</span> Item 3a
+   <span class="token list punctuation">1.</span> Item 3b</code></pre><ol>
 <li>Item 1</li>
 <li>Item 2</li>
 <li>Item 3<ol>
@@ -40,17 +57,24 @@
 </ol>
 <h1>
   <a href="#Images" id="Images"></a>Images
-</h1><p><img src="https://avatars2.githubusercontent.com/u/2193211?s=460&v=4" alt="GitHub Logo"></p><p>Format: <a href="https://travis-ci.org/acyortjs/markdown"><img src="https://travis-ci.org/acyortjs/markdown.svg?branch=master" alt="Build Status"></a></p><h1>
+</h1><pre class="language-md"><code class="language-md"><span class="token url">![GitHub Logo](https://avatars2.githubusercontent.com/u/2193211?s=460&amp;v=4)</span>
+
+Format: <span class="token url">[![Build Status](https://travis-ci.org/acyortjs/markdown.svg?branch=master)</span>](https://travis-ci.org/acyortjs/markdown)</code></pre><p><img src="https://avatars2.githubusercontent.com/u/2193211?s=460&v=4" alt="GitHub Logo"></p><p>Format: <a href="https://travis-ci.org/acyortjs/markdown"><img src="https://travis-ci.org/acyortjs/markdown.svg?branch=master" alt="Build Status"></a></p><h1>
   <a href="#Links" id="Links"></a>Links
-</h1><p><a href="http://github.com">http://github.com</a> - automatic!
+</h1><pre class="language-md"><code class="language-md">http://github.com - automatic!
+<span class="token url">[GitHub](http://github.com)</span></code></pre><p><a href="http://github.com">http://github.com</a> - automatic!
 <a href="http://github.com">GitHub</a></p><h1>
   <a href="#Blockquotes" id="Blockquotes"></a>Blockquotes
-</h1><p>As Kanye West said:</p><blockquote>
+</h1><pre class="language-md"><code class="language-md">As Kanye West said:
+
+<span class="token blockquote punctuation">></span> We're living the future so
+<span class="token blockquote punctuation">></span> the present is our past.</code></pre><p>As Kanye West said:</p><blockquote>
 <p>We&#39;re living the future so
 the present is our past.</p></blockquote>
 <h1>
   <a href="#Inline code" id="Inline code"></a>Inline code
-</h1><p>I think you should use an
+</h1><pre class="language-md"><code class="language-md">I think you should use an
+<span class="token code keyword">`&lt;addr>`</span> element here instead.</code></pre><p>I think you should use an
 <code>&lt;addr&gt;</code> element here instead.</p><h1>
   <a href="#Syntax highlighting" id="Syntax highlighting"></a>Syntax highlighting
 </h1><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">1</span>
@@ -60,7 +84,10 @@ the present is our past.</p></blockquote>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre><h1>
   <a href="#Task Lists" id="Task Lists"></a>Task Lists
-</h1><ul>
+</h1><pre class="language-md"><code class="language-md"><span class="token list punctuation">-</span> [x] @mentions, #refs, [links](), <span class="token bold"><span class="token punctuation">**</span>formatting<span class="token punctuation">**</span></span>, and <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">></span></span>tags<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">></span></span> supported
+<span class="token list punctuation">-</span> [x] list syntax required (any unordered or ordered list supported)
+<span class="token list punctuation">-</span> [x] this is a complete item
+<span class="token list punctuation">-</span> [ ] this is an incomplete item</code></pre><ul>
 <li><input checked="" disabled="" type="checkbox"> @mentions, #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported</li>
 <li><input checked="" disabled="" type="checkbox"> list syntax required (any unordered or ordered list supported)</li>
 <li><input checked="" disabled="" type="checkbox"> this is a complete item</li>
@@ -68,7 +95,10 @@ the present is our past.</p></blockquote>
 </ul>
 <h1>
   <a href="#Table" id="Table"></a>Table
-</h1><table>
+</h1><pre class="language-md"><code class="language-md"><span class="token title important">First Header | Second Header
+<span class="token punctuation">------------</span></span> | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column</code></pre><table>
 <thead>
 <tr>
 <th>First Header</th>
@@ -86,6 +116,8 @@ the present is our past.</p></blockquote>
 </tbody></table>
 <h1>
   <a href="#MathJax" id="MathJax"></a>MathJax
-</h1><p>inline: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x^2+y^2 = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p><p>next line: </p><div style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x^2+y^2 = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></div><p></p>
+</h1><pre class="language-md"><code class="language-md">inline: $x^2+y^2 = 1$
+
+next line: $x^2+y^2 = 1$</code></pre><p>inline: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x^2+y^2 = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p><p>next line: </p><div style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x^2+y^2 = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></div><p></p>
 </body>
 </html>
