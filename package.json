@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "test": "npm run test:lint && npm run test:cover",
+    "build": "node docs/demo.js",
     "test:lint": "eslint .",
     "test:unit": "mocha --reporter dot --require intelli-espower-loader ./test",
     "test:cover": "nyc npm run test:unit",
