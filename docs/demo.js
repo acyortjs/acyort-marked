@@ -18,6 +18,8 @@ $content
 
 const md = readFileSync(join(__dirname, 'demo.md'), 'utf8')
 const content = marker.render(md, { lineNumbers: false })
-const index = html.replace('$content', content)
+const index = html.split('$content')
 
-writeFileSync(join(__dirname, 'index.html'), index)
+index.splice(1, 0, content)
+
+writeFileSync(join(__dirname, 'index.html'), index.join(''))
