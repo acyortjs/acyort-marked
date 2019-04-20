@@ -45,10 +45,11 @@ marker.render('# An h1 header')
 //   An h1 header
 // </h1>
 
-const option = { getHeadingId: () => 'heading' }
-marker.render('# An h1 header', options)
+const slugify = require('@sindresorhus/slugify')
+const option = { getHeadingId: slugify }
+marker.render('# I ♥ Dogs', options)
 // <h1>
-//   <a href="#heading" id="heading"></a>
+//   <a href="#i-love-dogs" id="i-love-dogs"></a>
 //   An h1 header
 // </h1>
 
