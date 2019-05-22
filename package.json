@@ -1,6 +1,6 @@
 {
   "name": "@acyort/markdown",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "markdown parser with code highlighting and math latex support",
   "main": "index.js",
   "files": [
@@ -13,7 +13,7 @@
     "test:lint": "eslint .",
     "test:unit": "mocha --reporter dot --require intelli-espower-loader ./test",
     "test:cover": "nyc npm run test:unit",
-    "coverage": "nyc report --reporter=lcov npm run test:unit"
+    "coverage": "nyc report --reporter=lcov"
   },
   "repository": {
     "type": "git",
@@ -37,11 +37,11 @@
     "eslint-plugin-import": "^2.17.2",
     "intelli-espower-loader": "^1.0.1",
     "mocha": "^6.1.4",
-    "nyc": "^14.0.0",
+    "nyc": "^14.1.1",
     "power-assert": "^1.6.1"
   },
   "dependencies": {
-    "katex": "^0.10.1",
+    "katex": "^0.10.2",
     "marked": "^0.6.2",
     "prismjs": "^1.16.0"
   }
